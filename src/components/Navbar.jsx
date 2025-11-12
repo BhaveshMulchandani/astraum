@@ -1,17 +1,13 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import astrum_logo from "../assets/astrum_logo.jpg";
 
 const Navbar = () => {
   return (
-    <nav className="flex items-center justify-between px-10 py-5">
+    <nav className="flex items-center justify-between px-10 py-4 line-height-25">
       {/* Logo */}
-      <Link to="/" className="flex items-center">
-      <img className="h-20 w-auto object-contain" src={astrum_logo} alt="logo" />
-      </Link>
+      <h1 className="text-xl font-medium font-serif ">Astrumai</h1>
 
       {/* Nav Links */}
-      <ul className="flex items-center gap-8  font-sans font-medium text-lg">
+      <ul className="flex items-center gap-8 font-sans text-base font-medium">
         <li className="cursor-pointer hover:text-gray-400 transition">Work</li>
         <li className="cursor-pointer hover:text-gray-400 transition">About</li>
         <li className="cursor-pointer hover:text-gray-400 transition">Contact</li>
