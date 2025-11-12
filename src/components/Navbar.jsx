@@ -7,7 +7,7 @@ const Navbar = () => {
       <h1 className="text-xl font-medium font-serif ">Astrumai</h1>
 
       {/* Nav Links */}
-      <ul className="flex items-center gap-8 font-sans text-base font-medium">
+      <ul className="flex items-center gap-8 font-sans text-lg font-normal">
         <li className="cursor-pointer hover:text-gray-400 transition">Work</li>
         <li className="cursor-pointer hover:text-gray-400 transition">About</li>
         <li className="cursor-pointer hover:text-gray-400 transition">Contact</li>
