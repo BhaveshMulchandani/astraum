@@ -112,16 +112,64 @@ const Home = () => {
             <h1 className="text-[#919a9e] text-lg font-medium">
               marquee_effect_text
             </h1>
-            <img className="h-[300px] w-[533.33px] object-contain" src={marquee_effect_image} alt="marquee_effect_image" />
+            <img
+              className="h-[300px] w-[533.33px] object-contain"
+              src={marquee_effect_image}
+              alt="marquee_effect_image"
+            />
           </div>
           <div className="marquee flex flex-col gap-2">
             <h1 className="text-[#919a9e] text-lg font-medium">
               marquee_effect_text
             </h1>
-            <img className="h-[300px] w-[533.33px] object-contain" src={marquee_effect_image} alt="marquee_effect_image" />
+            <img
+              className="h-[300px] w-[533.33px] object-contain"
+              src={marquee_effect_image}
+              alt="marquee_effect_image"
+            />
           </div>
         </div>
+
+        <div className="mt-16 flex items-center justify-center">
+          <div className="flex items-center justify-center gap-1  bg-[#3d3d3d] hover:bg-black px-5 py-1 cursor-pointer rounded-md">
+            <h1 className="font-plain text-lg text-white font-medium">
+              Show more
+            </h1>
+            <i className="ri-add-line font-plain text-lg text-white font-medium"></i>
+          </div>
+        </div>
+
+        <hr className=" mt-16 border-t border-gray-50" />
+
+        <div className="leading-loose pl-[530px] p-16 mb-16 ">
+          <p className="mt-10 text-white font-medium font-plain text-4xl text-balance tracking-tight">
+            "Pentagram is very much like a co-op.We constantly shape the
+            culture,the work and the spirit of the place together."
+          </p>
+          <p className="py-2 text-white font-medium font-plain text-lg tracking-tight">Marina Willer</p>
+        </div>
       </div>
+
+      <div className="flex flex-col items-center justify-center space-y-2">
+        <h1 className="text-[#797f85] font-medium text-lg">
+          <span className="text-black font-medium text-lg">8</span> latest projects
+        </h1>
+        <i className="ri-arrow-down-long-line text-[#797f85] font-medium text-lg"></i>
+      </div>
+
+      <div className="grid grid-cols-[70%_30%] mt-16 mx-6 gap-2 p-2">
+        <div className="flex flex-col cursor-pointer text-lg font-medium text-[#4b5055]">
+          <img src={main_image} alt="speak data" />
+          <h1 className="mt-2 text-gray-700 font-semibold">'Speak Data'</h1>
+        </div>
+
+        <div className="flex flex-col cursor-pointer text-lg font-medium text-[#4b5055]">
+          <img src={unseen} alt="unseen" />
+          <h1 className="mt-2 text-gray-700 font-semibold">'UNSEEN'</h1>
+        </div>
+      </div>
+
+
     </>
   );
 };
