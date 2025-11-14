@@ -1,14 +1,15 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <nav className="flex items-center justify-between px-10 py-4 line-height-25">
+    <nav className="flex items-center justify-between mx-6 my-4">
       {/* Logo */}
-      <h1 className="text-xl font-medium font-serif ">Astrumai</h1>
+      <h1 className="text-2xl font-medium font-serif ">Astrumai</h1>
 
       {/* Nav Links */}
       <ul className="flex items-center gap-8 font-sans text-lg font-normal">
-        <li className="cursor-pointer hover:text-gray-400 transition">Work</li>
+        <Link to="/work"><li className="cursor-pointer hover:text-gray-400 transition">Work</li></Link>
         <li className="cursor-pointer hover:text-gray-400 transition">About</li>
         <li className="cursor-pointer hover:text-gray-400 transition">Contact</li>
         <li>
