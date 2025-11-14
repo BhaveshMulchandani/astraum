@@ -10,8 +10,8 @@ const Navbar = () => {
       {/* Nav Links */}
       <ul className="flex items-center gap-8 font-sans text-lg font-normal">
         <Link to="/work"><li className="cursor-pointer hover:text-gray-400 transition">Work</li></Link>
-        <li className="cursor-pointer hover:text-gray-400 transition">About</li>
-        <li className="cursor-pointer hover:text-gray-400 transition">Contact</li>
+        <Link to="/about"><li className="cursor-pointer hover:text-gray-400 transition">About</li></Link>
+        <Link to="/contact"><li className="cursor-pointer hover:text-gray-400 transition">Contact</li></Link>
         <li>
           <i className="ri-search-line text-lg hover:text-gray-400 cursor-pointer"></i>
         </li>
