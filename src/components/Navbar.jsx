@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <nav className="flex items-center justify-between mx-6 my-4">
       {/* Logo */}
-      <h1 className="text-2xl font-medium font-serif ">Astrumai</h1>
+      <h1 className="text-2xl font-medium font-serif ">Astraum</h1>
 
       {/* Nav Links */}
       <ul className="flex items-center gap-8 font-sans text-lg font-normal">
