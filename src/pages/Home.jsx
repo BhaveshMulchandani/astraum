@@ -1,19 +1,19 @@
 import React from "react";
 import Navbar from "../components/Navbar";
-import main_image from "../assets/main_image.avif";
-import speak_data from "../assets/speakdata.avif";
-import unseen from "../assets/unseen.avif";
 import scenario from "../assets/scenario.avif";
 import theartofthesnlportrait from "../assets/theartofthesnlportrait.avif";
 import loveletter from "../assets/adatalovelettertothesubway.avif";
 import marquee_effect_image from "../assets/marquee_effect_image.avif";
+import Slider from "../components/Slider";
 
 const Home = () => {
   return (
     <>
       <Navbar />
+
+      {/* i want to use here slider code  */}
       <div className="mb-16">
-        <img src={main_image} alt="main" />
+        <Slider/>
       </div>
 
       <div className="flex flex-col items-center justify-center space-y-2">
@@ -23,7 +23,7 @@ const Home = () => {
         <i className="ri-arrow-down-long-line text-[#797f85] font-medium text-lg"></i>
       </div>
 
-      <div className="grid grid-cols-[30%_70%] mt-16 mx-6 gap-2 p-2">
+      {/* <div className="grid grid-cols-[30%_70%] mt-16 mx-6 gap-2 p-2">
         <div className="flex flex-col cursor-pointer text-lg font-medium text-[#4b5055]">
           <img src={speak_data} alt="speak data" />
           <h1 className="mt-2 text-gray-700 font-semibold">'Speak Data'</h1>
@@ -33,7 +33,7 @@ const Home = () => {
           <img src={unseen} alt="unseen" />
           <h1 className="mt-2 text-gray-700 font-semibold">'UNSEEN'</h1>
         </div>
-      </div>
+      </div> */}
 
       <div className="grid grid-cols-3 mt-28 mx-6 gap-4 p-2">
         <div className="flex flex-col cursor-pointer text-lg font-medium text-[#4b5055] mb-12">
@@ -150,7 +150,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="flex flex-col items-center justify-center space-y-2">
+      {/* <div className="flex flex-col items-center justify-center space-y-2">
         <h1 className="text-[#797f85] font-medium text-lg">
           <span className="text-black font-medium text-lg">8</span> latest projects
         </h1>
@@ -167,7 +167,7 @@ const Home = () => {
           <img src={unseen} alt="unseen" />
           <h1 className="mt-2 text-gray-700 font-semibold">'UNSEEN'</h1>
         </div>
-      </div>
+      </div> */}
 
 
     </>

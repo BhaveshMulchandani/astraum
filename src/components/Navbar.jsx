@@ -1,7 +1,16 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
+  const location = useLocation();
+  const navLinks = [
+    { to: "/work", label: "Work" },
+    { to: "/about", label: "About" },
+    { to: "/contact", label: "Contact" },
+    { to: "/service", label: "Services" },
+
+  ];
+
   return (
     <nav className="flex items-center justify-between mx-6 my-4">
       {/* Logo */}
@@ -9,9 +18,15 @@ const Navbar = () => {
 
       {/* Nav Links */}
       <ul className="flex items-center gap-8 font-sans text-lg font-normal">
-        <Link to="/work"><li className="cursor-pointer hover:text-gray-400 transition">Work</li></Link>
-        <Link to="/about"><li className="cursor-pointer hover:text-gray-400 transition">About</li></Link>
-        <Link to="/contact"><li className="cursor-pointer hover:text-gray-400 transition">Contact</li></Link>
+        {navLinks.map((link) => (
+          <Link key={link.to} to={link.to}>
+            <li
+              className={`cursor-pointer hover:text-gray-400 transition ${location.pathname === link.to ? "underline" : ""}`}
+            >
+              {link.label}
+            </li>
+          </Link>
+        ))}
         <li>
           <i className="ri-search-line text-lg hover:text-gray-400 cursor-pointer"></i>
         </li>
