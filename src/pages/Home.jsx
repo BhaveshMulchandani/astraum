@@ -5,6 +5,7 @@ import theartofthesnlportrait from "../assets/theartofthesnlportrait.avif";
 import loveletter from "../assets/adatalovelettertothesubway.avif";
 import marquee_effect_image from "../assets/marquee_effect_image.avif";
 import Slider from "../components/Slider";
+import Footer from "../components/Footer";
 
 const Home = () => {
   return (
@@ -169,7 +170,7 @@ const Home = () => {
         </div>
       </div> */}
 
-
+      <Footer/>
     </>
   );
 };

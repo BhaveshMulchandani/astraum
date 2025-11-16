@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import office_image from "../assets/contactpage_image.avif";
+import Footer from "../components/Footer";
 
 const Contact = () => {
   return (
@@ -94,6 +95,8 @@ const Contact = () => {
           </div>
         </div>
       </div>
+
+      <Footer/>
     </>
   );
 };

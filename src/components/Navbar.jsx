@@ -8,7 +8,7 @@ const Navbar = () => {
     { to: "/about", label: "About" },
     { to: "/contact", label: "Contact" },
     { to: "/service", label: "Services" },
-
+    { to: "/careers", label: "Careers" },
   ];
 
   return (
@@ -21,7 +21,9 @@ const Navbar = () => {
         {navLinks.map((link) => (
           <Link key={link.to} to={link.to}>
             <li
-              className={`cursor-pointer hover:text-gray-400 transition ${location.pathname === link.to ? "underline" : ""}`}
+              className={`cursor-pointer hover:text-gray-400 transition ${
+                location.pathname === link.to ? "underline" : ""
+              }`}
             >
               {link.label}
             </li>

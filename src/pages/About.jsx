@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import developer from "../assets/1st_character.avif";
+import Footer from "../components/Footer";
 
 const About = () => {
   return (
@@ -105,6 +106,8 @@ const About = () => {
           </h1>
         </div>
       </div>
+
+      <Footer/>
     </>
   );
 };
