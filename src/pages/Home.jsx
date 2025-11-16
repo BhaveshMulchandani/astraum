@@ -36,14 +36,14 @@ const Home = () => {
         </div>
       </div> */}
 
-      <div className="grid grid-cols-3 mt-28 mx-6 gap-4 p-2">
-        <div className="flex flex-col cursor-pointer text-lg font-medium text-[#4b5055] mb-12">
-          <img src={scenario} alt="Scenario" />
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-16 sm:mt-20 lg:mt-28 mx-2 sm:mx-6 gap-4 p-2">
+        <div className="flex flex-col cursor-pointer text-base sm:text-lg font-medium text-[#4b5055] mb-8 sm:mb-12">
+          <img className="w-full h-auto object-cover rounded-lg" src={scenario} alt="Scenario" />
           <h1 className="mt-2 text-gray-700 font-semibold">Scenario</h1>
         </div>
 
-        <div className="flex flex-col cursor-pointer text-lg font-medium text-[#4b5055] mb-12">
-          <img src={theartofthesnlportrait} alt="theartofthesnlportrait" />
+        <div className="flex flex-col cursor-pointer text-base sm:text-lg font-medium text-[#4b5055] mb-8 sm:mb-12">
+          <img className="w-full h-auto object-cover rounded-lg" src={theartofthesnlportrait} alt="theartofthesnlportrait" />
           <h1 className="mt-2 text-gray-700 font-semibold">
             ‘The Art of the SNL Portrait’
           </h1>
@@ -53,45 +53,45 @@ const Home = () => {
           </h1>
         </div>
 
-        <div className="flex flex-col cursor-pointer text-lg font-medium text-[#4b5055] mb-12">
-          <img src={loveletter} alt="loveletter" />
+        <div className="flex flex-col cursor-pointer text-base sm:text-lg font-medium text-[#4b5055] mb-8 sm:mb-12">
+          <img className="w-full h-auto object-cover rounded-lg" src={loveletter} alt="loveletter" />
           <h1 className="mt-2 text-gray-700 font-semibold">
             ‘A Data Love Letter to the Subway’
           </h1>
         </div>
 
-        <div className="flex flex-col cursor-pointer text-lg font-medium text-[#4b5055] mb-12">
-          <img src={loveletter} alt="loveletter" />
+        <div className="flex flex-col cursor-pointer text-base sm:text-lg font-medium text-[#4b5055] mb-8 sm:mb-12">
+          <img className="w-full h-auto object-cover rounded-lg" src={loveletter} alt="loveletter" />
           <h1 className="mt-2 text-gray-700 font-semibold">
             ‘A Data Love Letter to the Subway’
           </h1>
         </div>
 
-        <div className="flex flex-col cursor-pointer text-lg font-medium text-[#4b5055] mb-12">
-          <img src={loveletter} alt="loveletter" />
+        <div className="flex flex-col cursor-pointer text-base sm:text-lg font-medium text-[#4b5055] mb-8 sm:mb-12">
+          <img className="w-full h-auto object-cover rounded-lg" src={loveletter} alt="loveletter" />
           <h1 className="mt-2 text-gray-700 font-semibold">
             ‘A Data Love Letter to the Subway’
           </h1>
         </div>
 
-        <div className="flex flex-col cursor-pointer text-lg font-medium text-[#4b5055] mb-12">
-          <img src={loveletter} alt="loveletter" />
+        <div className="flex flex-col cursor-pointer text-base sm:text-lg font-medium text-[#4b5055] mb-8 sm:mb-12">
+          <img className="w-full h-auto object-cover rounded-lg" src={loveletter} alt="loveletter" />
           <h1 className="mt-2 text-gray-700 font-semibold">
             ‘A Data Love Letter to the Subway’
           </h1>
         </div>
       </div>
 
-      <div className="w-full bg-[#222222] mt-12">
-        <div className="relative px-4 pt-16">
-          <h1 className="text-white font-plain text-6xl font-medium leading-tight">
+      <div className="w-full bg-[#222222] mt-8 sm:mt-12">
+        <div className="relative px-2 sm:px-4 pt-8 sm:pt-16">
+          <h1 className="text-white font-plain text-3xl sm:text-6xl font-medium leading-tight">
             Retrospective: Saturday Night Live
           </h1>
-          <span className="absolute top-20 right-4 text-white font-plain text-lg font-medium">
+          <span className="absolute top-8 sm:top-20 right-2 sm:right-4 text-white font-plain text-base sm:text-lg font-medium">
             (8)
           </span>
-          <div className="max-w-2xl">
-            <p className="mt-6 text-[#919a9e] text-lg font-medium tracking-tight">
+          <div className="max-w-full sm:max-w-2xl">
+            <p className="mt-4 sm:mt-6 text-[#919a9e] text-base sm:text-lg font-medium tracking-tight">
               When a scruffy after-hours comedy show debuted in NBC’s Studio 8H
               on October 11, 1975, no one could have known that the
               entertainment world was about to be changed forever. Over the next
@@ -108,46 +108,46 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="mt-12 flex items-center justify-center gap-2 overflow-hidden">
-          <div className="marquee flex flex-col gap-2">
-            <h1 className="text-[#919a9e] text-lg font-medium">
+        <div className="mt-8 sm:mt-12 flex flex-col sm:flex-row items-center justify-center gap-2 overflow-hidden">
+          <div className="marquee flex flex-col gap-2 w-full sm:w-auto">
+            <h1 className="text-[#919a9e] text-base sm:text-lg font-medium">
               marquee_effect_text
             </h1>
             <img
-              className="h-[300px] w-[533.33px] object-contain"
+              className="w-full sm:h-[300px] sm:w-[533.33px] object-contain"
               src={marquee_effect_image}
               alt="marquee_effect_image"
             />
           </div>
-          <div className="marquee flex flex-col gap-2">
-            <h1 className="text-[#919a9e] text-lg font-medium">
+          <div className="marquee flex flex-col gap-2 w-full sm:w-auto">
+            <h1 className="text-[#919a9e] text-base sm:text-lg font-medium">
               marquee_effect_text
             </h1>
             <img
-              className="h-[300px] w-[533.33px] object-contain"
+              className="w-full sm:h-[300px] sm:w-[533.33px] object-contain"
               src={marquee_effect_image}
               alt="marquee_effect_image"
             />
           </div>
         </div>
 
-        <div className="mt-16 flex items-center justify-center">
-          <div className="flex items-center justify-center gap-1  bg-[#3d3d3d] hover:bg-black px-5 py-1 cursor-pointer rounded-md">
-            <h1 className="font-plain text-lg text-white font-medium">
+        <div className="mt-8 sm:mt-16 flex items-center justify-center">
+          <div className="flex items-center justify-center gap-1 bg-[#3d3d3d] hover:bg-black px-4 sm:px-5 py-1 cursor-pointer rounded-md">
+            <h1 className="font-plain text-base sm:text-lg text-white font-medium">
               Show more
             </h1>
-            <i className="ri-add-line font-plain text-lg text-white font-medium"></i>
+            <i className="ri-add-line font-plain text-base sm:text-lg text-white font-medium"></i>
           </div>
         </div>
 
-        <hr className=" mt-16 border-t border-gray-50" />
+        <hr className="mt-8 sm:mt-16 border-t border-gray-50" />
 
-        <div className="leading-loose pl-[530px] p-16 mb-16 ">
-          <p className="mt-10 text-white font-medium font-plain text-4xl text-balance tracking-tight">
-            "Pentagram is very much like a co-op.We constantly shape the
-            culture,the work and the spirit of the place together."
+        <div className="leading-loose px-2 sm:pl-[530px] sm:p-16 mb-8 sm:mb-16">
+          <p className="mt-8 sm:mt-10 text-white font-medium font-plain text-2xl sm:text-4xl text-balance tracking-tight">
+            "Pentagram is very much like a co-op. We constantly shape the
+            culture, the work and the spirit of the place together."
           </p>
-          <p className="py-2 text-white font-medium font-plain text-lg tracking-tight">Marina Willer</p>
+          <p className="py-2 text-white font-medium font-plain text-base sm:text-lg tracking-tight">Marina Willer</p>
         </div>
       </div>
 

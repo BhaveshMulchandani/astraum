@@ -9,24 +9,24 @@ const Service = () => {
   return (
     <>
       <Navbar />
-      <div className="mt-16 mx-6">
-        <h1 className="font-plain text-6xl text-[#1a1a1a] font-medium">Services</h1>
+      <div className="mt-8 sm:mt-16 mx-2 sm:mx-6">
+        <h1 className="font-plain text-3xl sm:text-6xl text-[#1a1a1a] font-medium">Services</h1>
       </div>
 
-      <div className="mt-20 mx-6">
-        <span className="font-medium text-lg text-gray-500 font-plain">
+      <div className="mt-10 sm:mt-20 mx-2 sm:mx-6">
+        <span className="font-medium text-base sm:text-lg text-gray-500 font-plain">
           Showing All The Services
         </span>
       </div>
 
-      <div className="grid grid-cols-3 mt-28 mx-6 gap-4 p-2">
-        <div className="flex flex-col cursor-pointer text-lg font-medium text-[#4b5055] mb-12">
-          <img src={scenario} alt="Scenario" />
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-16 sm:mt-20 lg:mt-28 mx-2 sm:mx-6 gap-4 p-2">
+        <div className="flex flex-col cursor-pointer text-base sm:text-lg font-medium text-[#4b5055] mb-8 sm:mb-12">
+          <img className="w-full h-auto object-cover rounded-lg" src={scenario} alt="Scenario" />
           <h1 className="mt-2 text-gray-700 font-semibold">Scenario</h1>
         </div>
 
-        <div className="flex flex-col cursor-pointer text-lg font-medium text-[#4b5055] mb-12">
-          <img src={theartofthesnlportrait} alt="theartofthesnlportrait" />
+        <div className="flex flex-col cursor-pointer text-base sm:text-lg font-medium text-[#4b5055] mb-8 sm:mb-12">
+          <img className="w-full h-auto object-cover rounded-lg" src={theartofthesnlportrait} alt="theartofthesnlportrait" />
           <h1 className="mt-2 text-gray-700 font-semibold">
             ‘The Art of the SNL Portrait’
           </h1>
@@ -36,29 +36,29 @@ const Service = () => {
           </h1>
         </div>
 
-        <div className="flex flex-col cursor-pointer text-lg font-medium text-[#4b5055] mb-12">
-          <img src={loveletter} alt="loveletter" />
+        <div className="flex flex-col cursor-pointer text-base sm:text-lg font-medium text-[#4b5055] mb-8 sm:mb-12">
+          <img className="w-full h-auto object-cover rounded-lg" src={loveletter} alt="loveletter" />
           <h1 className="mt-2 text-gray-700 font-semibold">
             ‘A Data Love Letter to the Subway’
           </h1>
         </div>
 
-        <div className="flex flex-col cursor-pointer text-lg font-medium text-[#4b5055] mb-12">
-          <img src={loveletter} alt="loveletter" />
+        <div className="flex flex-col cursor-pointer text-base sm:text-lg font-medium text-[#4b5055] mb-8 sm:mb-12">
+          <img className="w-full h-auto object-cover rounded-lg" src={loveletter} alt="loveletter" />
           <h1 className="mt-2 text-gray-700 font-semibold">
             ‘A Data Love Letter to the Subway’
           </h1>
         </div>
 
-        <div className="flex flex-col cursor-pointer text-lg font-medium text-[#4b5055] mb-12">
-          <img src={loveletter} alt="loveletter" />
+        <div className="flex flex-col cursor-pointer text-base sm:text-lg font-medium text-[#4b5055] mb-8 sm:mb-12">
+          <img className="w-full h-auto object-cover rounded-lg" src={loveletter} alt="loveletter" />
           <h1 className="mt-2 text-gray-700 font-semibold">
             ‘A Data Love Letter to the Subway’
           </h1>
         </div>
 
-        <div className="flex flex-col cursor-pointer text-lg font-medium text-[#4b5055] mb-12">
-          <img src={loveletter} alt="loveletter" />
+        <div className="flex flex-col cursor-pointer text-base sm:text-lg font-medium text-[#4b5055] mb-8 sm:mb-12">
+          <img className="w-full h-auto object-cover rounded-lg" src={loveletter} alt="loveletter" />
           <h1 className="mt-2 text-gray-700 font-semibold">
             ‘A Data Love Letter to the Subway’
           </h1>
