@@ -15,7 +15,7 @@ const Navbar = () => {
   return (
     <nav className="flex items-center justify-between mx-6 my-4 relative">
       {/* Logo */}
-      <Link to="/" className="text-2xl font-medium font-serif ">Astrauam</Link>
+      <Link to="/" className="text-2xl font-medium font-serif ">Astraum</Link>
 
       {/* Hamburger Icon (Mobile) */}
       <button

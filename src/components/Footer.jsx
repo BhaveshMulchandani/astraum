@@ -57,7 +57,7 @@ const Footer = () => {
 
           {/* RIGHT COPYRIGHT */}
           <div className="text-gray-400 font-medium">
-            © 1972 – 2025 Astrauam
+            © 1972 – 2025 Astraum
           </div>
         </div>
       </div>
