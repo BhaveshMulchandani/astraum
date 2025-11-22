@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import logo from '../assets/astrum_logo.png';
+import logo from "../assets/astrum_logo.png";
 
 const Navbar = () => {
   const location = useLocation();
@@ -16,7 +16,9 @@ const Navbar = () => {
   return (
     <nav className="flex items-center justify-between mx-6 my-4 relative">
       {/* Logo */}
-      <Link to="/"><img className='h-8 md:h-16 object-contain'src={logo} alt="logo" /></Link>
+      <Link to="/">
+        <img className="h-8 md:h-16 object-contain" src={logo} alt="logo" />
+      </Link>
 
       {/* Hamburger Icon (Mobile) */}
       <button
@@ -30,7 +32,11 @@ const Navbar = () => {
       {/* Nav Links */}
       <ul
         className={`font-sans text-lg font-normal gap-8 md:flex items-center transition-all duration-300
-          ${menuOpen ? "flex flex-col absolute top-full right-0 bg-white shadow-lg w-48 z-50" : "hidden"}
+          ${
+            menuOpen
+              ? "flex flex-col absolute top-full right-0 bg-white shadow-lg w-48 z-50"
+              : "hidden"
+          }
           md:static md:bg-transparent md:shadow-none md:w-auto md:flex-row md:gap-8 md:items-center md:ml-0 md:mr-0 md:block`}
       >
         {navLinks.map((link) => (
@@ -45,7 +51,14 @@ const Navbar = () => {
           </Link>
         ))}
         <li className="px-4 py-2 md:p-0">
-          <i className="ri-search-line text-lg text-[#bd7913] hover:text-[#3e2009] cursor-pointer"></i>
+          <a
+            href="https://forms.gle/1kgbcubrvibXXeQH9"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#bd7913] hover:text-[#3e2009] cursor-pointer"
+          >
+            Partner with us
+          </a>
         </li>
       </ul>
     </nav>
