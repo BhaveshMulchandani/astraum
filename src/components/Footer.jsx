@@ -50,7 +50,7 @@ const Footer = () => {
           <div className="flex flex-wrap items-center font-plain text-gray-400 font-medium gap-4 sm:gap-6">
             <span className="cursor-pointer hover:text-white">Instagram</span>
             <span className="cursor-pointer hover:text-white">LinkedIn</span>
-            <span className="cursor-pointer hover:text-white">X</span>
+            <span className="cursor-pointer hover:text-white">Youtube</span>
             <span className="cursor-pointer hover:text-white">Facebook</span>
             <Link to="/careers" className="cursor-pointer hover:text-white">Careers</Link>
           </div>

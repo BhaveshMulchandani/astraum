@@ -11,8 +11,6 @@ const Home = () => {
   return (
     <>
       <Navbar />
-
-      {/* i want to use here slider code  */}
       <div className="mb-16">
         <Slider/>
       </div>

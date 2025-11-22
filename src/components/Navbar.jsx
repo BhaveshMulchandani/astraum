@@ -1,21 +1,22 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import logo from '../assets/astrum_logo.png';
 
 const Navbar = () => {
   const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
   const navLinks = [
     { to: "/work", label: "Work" },
+    { to: "/service", label: "Services" },
     { to: "/about", label: "About" },
     { to: "/contact", label: "Contact" },
-    { to: "/service", label: "Services" },
     { to: "/careers", label: "Careers" },
   ];
 
   return (
     <nav className="flex items-center justify-between mx-6 my-4 relative">
       {/* Logo */}
-      <Link to="/" className="text-2xl font-medium font-serif ">Astraum</Link>
+      <Link to="/"><img className='h-8 md:h-16 object-contain'src={logo} alt="logo" /></Link>
 
       {/* Hamburger Icon (Mobile) */}
       <button
@@ -35,7 +36,7 @@ const Navbar = () => {
         {navLinks.map((link) => (
           <Link key={link.to} to={link.to} onClick={() => setMenuOpen(false)}>
             <li
-              className={`cursor-pointer hover:text-gray-400 transition px-4 py-2 md:p-0 ${
+              className={`cursor-pointer text-[#bd7913] hover:text-[#3e2009] transition px-4 py-2 md:p-0 ${
                 location.pathname === link.to ? "underline" : ""
               }`}
             >
@@ -44,7 +45,7 @@ const Navbar = () => {
           </Link>
         ))}
         <li className="px-4 py-2 md:p-0">
-          <i className="ri-search-line text-lg hover:text-gray-400 cursor-pointer"></i>
+          <i className="ri-search-line text-lg text-[#bd7913] hover:text-[#3e2009] cursor-pointer"></i>
         </li>
       </ul>
     </nav>
