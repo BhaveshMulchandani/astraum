@@ -50,16 +50,6 @@ const Navbar = () => {
             </li>
           </Link>
         ))}
-        <li className="px-4 py-2 md:p-0">
-          <a
-            href="https://forms.gle/1kgbcubrvibXXeQH9"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[#bd7913] hover:text-[#3e2009] cursor-pointer"
-          >
-            Partner with us
-          </a>
-        </li>
       </ul>
     </nav>
   );

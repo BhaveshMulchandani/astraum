@@ -9,7 +9,7 @@ const Careers = () => {
       <Navbar />
       <div className="mt-8 sm:mt-16 mx-2 sm:mx-6">
         <h1 className="font-plain text-3xl sm:text-6xl text-[#1a1a1a] font-medium">
-          Working at Astrauam
+          Working at Astraum
         </h1>
       </div>
 

@@ -1,18 +1,15 @@
 import React, { useRef } from 'react';
-// Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-
 import './styles.css';
-
-// import required modules
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import main from '../assets/1.jpg';
+import main_2 from '../assets/2.jpg';
+import main_3 from '../assets/3.jpg';
+import main_4 from '../assets/4.jpg';
 
-import main_image from "../assets/main_image.avif";
 
 export default function Slider() {
   const progressCircle = useRef(null);
@@ -39,19 +36,16 @@ export default function Slider() {
         className="mySwiper"
       >
         <SwiperSlide>
-            <img src={main_image} alt="main" />
+            <img src={main} alt="main" />
         </SwiperSlide>
          <SwiperSlide>
-            <img src={main_image} alt="main" />
+            <img src={main_2} alt="main" />
         </SwiperSlide>
          <SwiperSlide>
-            <img src={main_image} alt="main" />
+            <img src={main_3} alt="main" />
         </SwiperSlide>
          <SwiperSlide>
-            <img src={main_image} alt="main" />
-        </SwiperSlide>
-         <SwiperSlide>
-            <img src={main_image} alt="main" />
+            <img src={main_4} alt="main" />
         </SwiperSlide>
        
         <div className="autoplay-progress" slot="container-end">

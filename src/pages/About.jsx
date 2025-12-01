@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "../components/Navbar";
-import developer from "../assets/1st_character.avif";
+import dining from "../assets/Dining-1.jpg";
 import Footer from "../components/Footer";
 
 const About = () => {
@@ -9,7 +9,7 @@ const About = () => {
       <Navbar />
       <div className="mt-8 sm:mt-16 mx-2 sm:mx-6 flex flex-col sm:flex-row sm:justify-between">
         <h1 className="font-plain text-3xl sm:text-6xl text-[#1a1a1a] font-medium leading-none">
-          About Pentagram
+          About Astraum
         </h1>
 
         <div className="mt-3 flex flex-col max-w-full sm:max-w-[700px] leading-relaxed font-plain text-[#1a1a1a] font-[540] text-base sm:text-lg py-3 sm:mr-4">
@@ -35,21 +35,68 @@ const About = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-16 sm:mt-28 mx-2 sm:mx-6 ">
-        {[...Array(7)].map((_, i) => (
-          <div key={i} className="flex flex-col">
-            <img className="w-full h-auto object-cover rounded-lg" src={developer} alt="developer" />
-            <h1 className="font-plain text-[#1a1a1a] font-medium text-base sm:text-xl">
-              Developer Name
-            </h1>
-            <h1 className="font-plain text-sm sm:text-lg font-medium text-gray-500">
-              Location
-            </h1>
-          </div>
-        ))}
-      </div>
+      <div className="mt-20 space-y-20 mb-4 ">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center mx-2 sm:mx-6">
+          <img
+            src={dining}
+            alt="dining area"
+            className="w-full h-[320px] sm:h-[420px] object-cover shadow-md"
+          />
 
-      <Footer/>
+          <section className="flex flex-col justify-center">
+            <h1 className="text-3xl sm:text-4xl font-semibold text-[#1a1a1a] mb-4">
+              How We Work
+            </h1>
+
+            <p className="text-gray-700 leading-relaxed text-base sm:text-lg">
+              Our process blends creativity with technical precision. We begin
+              by understanding your needs, preferences, and lifestyle. Our team
+              develops mood boards and early concepts to define the direction.
+              <br />
+              <br />
+              We refine the layout, material palette, color schemes, and
+              lighting plan while ensuring functionality and aesthetic harmony.
+              With experienced craftsmen and trusted vendors, we bring designs
+              to life with precision, transparency, and timely delivery.
+              <br />
+              <br />
+              Finally, we complete the project with decor, furniture placement,
+              and personalized styling to create a space that feels uniquely
+              yours.
+            </p>
+          </section>
+        </div>
+
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center mx-2 sm:mx-6">
+
+          <section className="flex flex-col justify-center order-2 md:order-1">
+            <h1 className="text-3xl sm:text-4xl font-semibold text-[#1a1a1a] mb-4">
+              Our Projects
+            </h1>
+
+            <p className="text-gray-700 leading-relaxed text-base sm:text-lg">
+              Our residential, commercial, and hospitality projects are crafted
+              with an emphasis on detail, functionality, and timeless design.
+              <br />
+              <br />
+              Whether creating a warm home interior or a modern workspace, each
+              project reflects our commitment to quality craftsmanship and
+              thoughtful execution.
+              <br />
+              <br />
+              Every design is tailored to meet client preferences and elevate
+              the experience of the space.
+            </p>
+          </section>
+          <img
+            src={dining}
+            alt="project sample"
+            className="w-full h-[320px] sm:h-[420px] object-cover shadow-md order-1 md:order-2"
+          />
+        </div>
+      </div>
+      <Footer />
     </>
   );
 };
