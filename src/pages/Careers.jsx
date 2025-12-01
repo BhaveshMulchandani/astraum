@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import view from "../assets/view-1.jpg";
+import view from "../assets/View-1.jpg";
 
 const Careers = () => {
   return (
