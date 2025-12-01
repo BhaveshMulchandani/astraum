@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import employee from "../assets/employee.avif";
+import view from "../assets/view-1.jpg";
 
 const Careers = () => {
   return (
@@ -14,7 +14,7 @@ const Careers = () => {
       </div>
 
       <div className=" mt-8 mb-16">
-        <img src={employee} alt="working employees" />
+        <img src={view} alt="working employees" />
       </div>
 
       <div className="flex flex-col lg:flex-row justify-between gap-10 mt-16">
