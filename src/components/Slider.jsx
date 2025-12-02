@@ -36,16 +36,16 @@ export default function Slider() {
         className="mySwiper"
       >
         <SwiperSlide>
-            <img src={main} alt="main" />
+          <img src={main} alt="main"/>
         </SwiperSlide>
          <SwiperSlide>
-            <img src={main_2} alt="main" />
+          <img src={main_2} alt="main" />
         </SwiperSlide>
          <SwiperSlide>
-            <img src={main_3} alt="main" />
+          <img src={main_3} alt="main" />
         </SwiperSlide>
          <SwiperSlide>
-            <img src={main_4} alt="main" />
+          <img src={main_4} alt="main" />
         </SwiperSlide>
        
         <div className="autoplay-progress" slot="container-end">

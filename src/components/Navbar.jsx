@@ -42,7 +42,7 @@ const Navbar = () => {
         {navLinks.map((link) => (
           <Link key={link.to} to={link.to} onClick={() => setMenuOpen(false)}>
             <li
-              className={`cursor-pointer text-[#bd7913] hover:text-[#3e2009] transition px-4 py-2 md:p-0 ${
+              className={`cursor-pointer text-[#4b0900] hover:text-[#bd7913] transition px-4 py-2 md:p-0 ${
                 location.pathname === link.to ? "underline" : ""
               }`}
             >

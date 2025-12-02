@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import Navbar from "../components/Navbar";
 import dining from "../assets/Dining-1.jpg";
 import mandir from "../assets/Mandir.jpg";
@@ -11,16 +12,31 @@ import view_3 from "../assets/View-3.jpg";
 import view_4 from "../assets/View-4.jpg";
 import Slider from "../components/Slider";
 import Footer from "../components/Footer";
-import img from "../assets/img.png";
 import img1 from "../assets/img_1.png";
-import img2 from "../assets/img_2.png";
-import img3 from "../assets/img_3.png";
 
 const Home = () => {
+  const [selectedImage, setSelectedImage] = useState(null);
+
+  const openImage = (img) => setSelectedImage(img);
+  const closeImage = () => setSelectedImage(null);
+
+  const projects = [
+    { img: dining, title: "Scenario" },
+    {
+      img: mandir,
+      title: "‘The Art of the SNL Portrait’",
+      desc: "Saturday Night Live photographer Mary Ellen Matthews collects her iconic show bumpers in a new monograph.",
+    },
+    { img: kitchen, title: "‘A Data Love Letter to the Subway’" },
+    { img: kitchen_2, title: "‘A Data Love Letter to the Subway’" },
+    { img: dining_2, title: "‘A Data Love Letter to the Subway’" },
+    { img: view_1, title: "‘A Data Love Letter to the Subway’" },
+  ];
+
   return (
     <>
       <Navbar />
-      <div className="mb-16">
+      <div className="mt-6 mb-9 h-[40vh] sm:h-[60vh] lg:h-[80vh] flex items-center justify-center">
         <Slider />
       </div>
 
@@ -31,124 +47,59 @@ const Home = () => {
         <i className="ri-arrow-down-long-line text-[#797f85] font-medium text-lg"></i>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-16 sm:mt-20 lg:mt-28 mx-2 sm:mx-6 gap-4 p-2">
-        <div className="flex flex-col cursor-pointer text-base sm:text-lg font-medium text-[#4b5055] mb-8 sm:mb-12">
-          <img
-            className="w-full h-auto object-cover rounded-lg"
-            src={dining}
-            alt="Scenario"
-          />
-          <h1 className="mt-2 text-gray-700 font-semibold">Scenario</h1>
-        </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-16 mx-4 gap-8">
+        {projects.map((p, i) => (
+          <div
+            key={i}
+            className="flex flex-col text-base sm:text-lg font-medium text-[#4b5055] cursor-pointer"
+          >
+            <img
+              onClick={() => openImage(p.img)}
+              className="w-full h-auto object-cover rounded-lg hover:opacity-90 transition"
+              src={p.img}
+              alt={p.title}
+            />
 
-        <div className="flex flex-col cursor-pointer text-base sm:text-lg font-medium text-[#4b5055] mb-8 sm:mb-12">
-          <img
-            className="w-full h-auto object-cover rounded-lg"
-            src={mandir}
-            alt="theartofthesnlportrait"
-          />
-          <h1 className="mt-2 text-gray-700 font-semibold">
-            ‘The Art of the SNL Portrait’
-          </h1>
-          <h1 className="p-0 text-gray-700 font-semibold tracking-tight">
-            Saturday Night Live photographer Mary Ellen Matthews collects her
-            iconic show bumpers in a new monograph.
-          </h1>
-        </div>
+            <h1 className="mt-2 text-gray-700 font-semibold">{p.title}</h1>
 
-        <div className="flex flex-col cursor-pointer text-base sm:text-lg font-medium text-[#4b5055] mb-8 sm:mb-12">
-          <img
-            className="w-full h-auto object-cover rounded-lg"
-            src={kitchen}
-            alt="loveletter"
-          />
-          <h1 className="mt-2 text-gray-700 font-semibold">
-            ‘A Data Love Letter to the Subway’
-          </h1>
-        </div>
-
-        <div className="flex flex-col cursor-pointer text-base sm:text-lg font-medium text-[#4b5055] mb-8 sm:mb-12">
-          <img
-            className="w-full h-auto object-cover rounded-lg"
-            src={kitchen_2}
-            alt="loveletter"
-          />
-          <h1 className="mt-2 text-gray-700 font-semibold">
-            ‘A Data Love Letter to the Subway’
-          </h1>
-        </div>
-
-        <div className="flex flex-col cursor-pointer text-base sm:text-lg font-medium text-[#4b5055] mb-8 sm:mb-12">
-          <img
-            className="w-full h-auto object-cover rounded-lg"
-            src={dining_2}
-            alt="loveletter"
-          />
-          <h1 className="mt-2 text-gray-700 font-semibold">
-            ‘A Data Love Letter to the Subway’
-          </h1>
-        </div>
-
-        <div className="flex flex-col cursor-pointer text-base sm:text-lg font-medium text-[#4b5055] mb-8 sm:mb-12">
-          <img
-            className="w-full h-auto object-cover rounded-lg"
-            src={view_1}
-            alt="loveletter"
-          />
-          <h1 className="mt-2 text-gray-700 font-semibold">
-            ‘A Data Love Letter to the Subway’
-          </h1>
-        </div>
+            {p.desc && (
+              <p className="text-gray-700 text-sm sm:text-base tracking-tight">
+                {p.desc}
+              </p>
+            )}
+          </div>
+        ))}
       </div>
 
-      <div className="font-inter flex flex-col items-center justify-center bg-[#222222] py-10 relative">
-        <h1 className="text-5xl font-bold text-[#bd7913]">Why Astraum?</h1>
-        <div className="flex flex-wrap justify-center items-center gap-20 mt-10">
-          {/* Item 1 */}
-          <div className="relative group flex flex-col items-center justify-center cursor-pointer">
-            <img src={img1} />
-            <span className="text-[#bd7913] text-2xl font-bold mt-4">
-              100% Clear
-            </span>
+      {/* WHY ASTRAUM SECTION */}
+      <div className="font-plain flex flex-col items-center justify-center py-16">
+        <h1 className="text-center text-[34px] sm:text-[42px] text-[#1f1f1f] tracking-tight">
+          Why Astraum?
+        </h1>
 
-            {/* Hover Circle */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-[#4E342E] text-white text-center text-sm w-40 h-40 p-4 flex items-center justify-center rounded-full z-10 shadow-lg">
-              We use no chemicals or preservatives in our process.
-            </div>
-          </div>
+        <div className="flex flex-wrap justify-center items-center gap-20 mt-12">
+          {[1, 2, 3, 4].map((_, i) => (
+            <div
+              key={i}
+              className="relative group flex flex-col items-center cursor-pointer"
+            >
+              <img src={img1} className="w-20 h-20 bg-black rounded-full" />
 
-          {/* Item 2 */}
-          <div className="relative group flex flex-col items-center justify-center cursor-pointer">
-            <img src={img2} />
-            <span className="text-[#bd7913] text-2xl font-bold mt-4">
-              Made in small batches
-            </span>
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-[#4E342E] text-white text-center text-sm w-40 h-40 p-4 flex items-center justify-center rounded-full z-10 shadow-lg">
-              Every batch is handcrafted with care.
-            </div>
-          </div>
+              <span className="text-[#5a5a5a] mt-4 text-lg tracking-tight">
+                100% Clear
+              </span>
 
-          {/* Item 3 */}
-          <div className="relative group flex flex-col items-center justify-center cursor-pointer">
-            <img src={img3} />
-            <span className="text-[#bd7913] text-2xl font-bold mt-4">
-              Rooted in Tradition
-            </span>
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-[#4E342E] text-white text-center text-sm w-40 h-40 p-4 flex items-center justify-center rounded-full z-10 shadow-lg">
-              Recipes passed down for generations.
+              {/* Hover circle */}
+              <div
+                className="absolute top-0 left-1/2 -translate-x-1/2 translate-y-1/2 
+                opacity-0 group-hover:opacity-100 transition-all duration-300
+                bg-[#4E342E] text-white text-center text-sm w-40 h-40 p-4 flex 
+                items-center justify-center rounded-full shadow-lg"
+              >
+                We use no chemicals or preservatives in our process.
+              </div>
             </div>
-          </div>
-
-          {/* Item 4 */}
-          <div className="relative group flex flex-col items-center justify-center cursor-pointer">
-            <img src={img} />
-            <span className="text-[#bd7913] text-2xl font-bold mt-4">
-              Farm Fresh
-            </span>
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-[#4E342E] text-white text-center text-sm w-40 h-40 p-4 flex items-center justify-center rounded-full z-10 shadow-lg">
-              Fresh from our farms to your home.
-            </div>
-          </div>
+          ))}
         </div>
       </div>
 
@@ -200,7 +151,6 @@ const Home = () => {
               alt="marquee_effect_image"
             />
           </div>
-          
         </div>
 
         <div className="mt-8 sm:mt-16 flex items-center justify-center">
@@ -226,6 +176,18 @@ const Home = () => {
       </div>
 
       <Footer />
+
+      {selectedImage && (
+        <div
+          className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-50"
+          onClick={closeImage}
+        >
+          <img
+            src={selectedImage}
+            className="max-w-[90%] max-h-[90%] object-contain shadow-xl"
+          />
+        </div>
+      )}
     </>
   );
 };
