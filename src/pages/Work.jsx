@@ -34,7 +34,7 @@ const Work = () => {
       <Navbar />
       <div className="mt-8 sm:mt-16 mx-2 sm:mx-6">
         <h1 className="font-plain text-3xl sm:text-6xl text-[#1a1a1a] font-medium">
-          Our Successful Projects
+        Recent Projects
         </h1>
       </div>
 
